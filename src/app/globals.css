@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ライトモード用 */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --sidebar-menu-background: #a8a8a8;
+  --sidebar-menu-foreground: #fff;
+}
+
+/* ダークモード用 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-m-plus-1p);
+  --font-mono: var(--font-m-plus-1-code);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "M PLUS 1p", Arial, Helvetica, sans-serif;
+}
+
+.layout-header {
+  @apply h-16 grid grid-cols-12 text-lg;
+}
+
+.wiki-logo {
+  font-size: 1.5rem;
+
+}
+
+.layout-sidebar {
+  margin: 0 .5rem;
+}
+
+.sidebar-menu {
+  background: var(--sidebar-menu-background);
+  color: var(--sidebar-menu-foreground);
+
+  width: 100%;
+  padding: .25rem .375rem;
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid gray;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1rem 0 .64rem;
+  border-bottom: 1px solid gray;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+h4, h5, h6 {
+  font-weight: bold;
+}
+p {
+  margin: .25rem 0;
+}
