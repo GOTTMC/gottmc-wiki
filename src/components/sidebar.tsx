@@ -11,10 +11,10 @@ export default function Sidebar() {
             {menu.title}
           </div>
 
-          <ul>
+          <ul className="sidebar-menu-list">
             {menu.contents.map((content, contentIdx) =>
-              <li key={contentIdx}>
-                <Link href={content.url}>
+              <li className="sidebar-menu-content" key={contentIdx}>
+                <Link href={content.url} className="hover:underline">
                   {content.title}
                 </Link>
               </li>

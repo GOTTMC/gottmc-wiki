@@ -1,10 +1,13 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Header() {
   return (
     <header className="layout-header">
       <div className="col-span-6 mx-4 my-2">
-        <div className="wiki-logo">ゴットマイクラ鯖wiki</div>
+        <Link href="/">
+          <div className="wiki-logo">ゴットを感じるマイクラ鯖wiki</div>
+        </Link>
       </div>
 
       

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { M_PLUS_1p, M_PLUS_1_Code } from "next/font/google";
 import "./globals.css";
-import Sidebar from "../components/sidebar";
-import Header from "../components/header";
+import Sidebar from "@/components/Sidebar";
+import Header from "@/components/Header";
 
 const mPlus1p = M_PLUS_1p({
   variable: "--font-m-plus-1p",
@@ -30,12 +30,12 @@ export default function RootLayout({
         className={`${mPlus1p.variable} ${mPlus1Code.variable} antialiased min-h-screen w-full`}
       >
         <Header />
-        <div className="grid grid-cols-16 m-2">
-          <div className="col-span-4">
+        <div className="grid grid-cols-[13rem_1fr] m-2">
+          <div className="">
             <Sidebar />
           </div>
 
-          <div className="col-span-12 m-2">
+          <div className="m-2">
             {children}
           </div>
         </div>

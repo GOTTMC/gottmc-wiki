@@ -11,6 +11,10 @@ const withMDX = createMDX({
   // Add markdown plugins here, as desired
   extension: /\.(md|mdx)$/,
   options: {
+    remarkPlugins: [
+      'remark-gfm',
+      'remark-frontmatter',
+    ],
     rehypePlugins: [
       'rehype-slug',
     ],

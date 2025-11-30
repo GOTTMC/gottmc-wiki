@@ -1,20 +1,40 @@
+import { notFound } from "next/navigation";
+import SetPageTitle from "@/components/SetPageTitle";
+
 export default async function Page({
   params,
 }: {
   params: Promise<{ slug: string[] }>
 }) {
   const { slug } = await params;
-  const { default: Post, metadata } = await import(`@/content/${slug.join('/')}.mdx`);
+  const pathname = slug.join('/');
+  const rawPost = await getPostBySlug(pathname);
+
+  async function getPostBySlug(slug: string) {
+    try {
+      const post = await import(`@/content/${slug}.mdx`);
+  
+      const { default: Post, ...metadata } = post;
+      return { Post, metadata };
+    } catch {
+      return undefined;
+    }
+  }
+
+  if (!rawPost) {
+    notFound();
+  }
+
+  const { Post, metadata } = rawPost;
 
   return (
     <>
-      <h1 id="firstHeading">{ metadata.title }</h1>
-      
-      <div className="my-2">
-        <Post />
-      </div>
+      { // set to the provided title if post has one
+        metadata?.title && <SetPageTitle value={metadata?.title} />
+      }
+      <Post />
     </>
   );
 }
  
-export const dynamicParams = true;
+export const dynamicParams = false;
