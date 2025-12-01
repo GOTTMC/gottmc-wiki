@@ -12,6 +12,7 @@ export default function CatchAll() {
   return (
     <>
       <SetPageTitle value={pageTitle} />
+      このページは存在しません。
     </>
   )
 }

@@ -1,5 +1,6 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import SetPageTitle from "@/components/SetPageTitle";
+import Link from "next/link";
 
 export default async function Page({
   params,
@@ -12,9 +13,11 @@ export default async function Page({
 
   async function getPostBySlug(slug: string) {
     try {
-      const post = await import(`@/content/${slug}.mdx`);
+      const {
+        default: Post,
+        frontmatter: metadata
+      } = await import(`@/content/${slug.toLowerCase()}.mdx`);
   
-      const { default: Post, ...metadata } = post;
       return { Post, metadata };
     } catch {
       return undefined;
@@ -27,12 +30,29 @@ export default async function Page({
 
   const { Post, metadata } = rawPost;
 
+  if (metadata.url) {
+    if (
+      pathname.toLowerCase() !== metadata.url.toLowerCase() &&
+      pathname.toLowerCase() !== pathname
+    ) {
+      redirect(pathname.toLowerCase());
+    }
+  
+    if (pathname !== metadata.url) {
+      redirect(metadata.url);
+    }
+  }
+
+  const overrideComponents = {
+    a: Link,
+  }
+
   return (
     <>
       { // set to the provided title if post has one
-        metadata?.title && <SetPageTitle value={metadata?.title} />
+        metadata.title && <SetPageTitle value={metadata.title} />
       }
-      <Post />
+      <Post components={overrideComponents} />
     </>
   );
 }

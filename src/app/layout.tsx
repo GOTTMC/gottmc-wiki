@@ -30,14 +30,14 @@ export default function RootLayout({
         className={`${mPlus1p.variable} ${mPlus1Code.variable} antialiased min-h-screen w-full`}
       >
         <Header />
-        <div className="grid grid-cols-[13rem_1fr] m-2">
-          <div className="">
+        <div className="grid grid-cols-[13rem_1fr] mx-4 my-2">
+          <div className="mr-2">
             <Sidebar />
           </div>
 
-          <div className="m-2">
+          <article className="p-4 page-article">
             {children}
-          </div>
+          </article>
         </div>
       </body>
     </html>

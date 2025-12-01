@@ -6,7 +6,7 @@ export default function Header() {
     <header className="layout-header">
       <div className="col-span-6 mx-4 my-2">
         <Link href="/">
-          <div className="wiki-logo">ゴットを感じるマイクラ鯖wiki</div>
+          <div className="wiki-logo text-foreground">ゴットを感じるマイクラ鯖wiki</div>
         </Link>
       </div>
 
