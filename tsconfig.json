@@ -23,7 +23,7 @@
       "@/content/*": ["content/*"],
       "@/public/*": ["public/*"],
     },
-    "baseUrl": "/"
+    "baseUrl": "."
   },
   "include": [
     "next-env.d.ts",
