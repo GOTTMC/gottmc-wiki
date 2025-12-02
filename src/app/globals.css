@@ -82,6 +82,9 @@ li {
 ul {
   list-style: square;
   margin: .64rem 0 0 1.6rem;
+}
+
+.column-list {
   column-width: 16rem;
 }
 
@@ -170,4 +173,8 @@ table {
 
 .text-foreground {
   color: var(--foreground);
+}
+
+.pixel-image {
+  image-rendering: pixelated;
 }

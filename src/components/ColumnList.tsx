@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 
-export default function HorizontalList({
+export default function ColumnList({
   children,
 }: {
   children: ReactNode,
 }) {
   return (
-    <div className="horizontal-list">
+    <div className="column-list">
       { children }
     </div>
   );
