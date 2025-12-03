@@ -18,6 +18,7 @@ const withMDX = createMDX({
     ],
     rehypePlugins: [
       'rehype-slug',
+      'rehype-prism-plus',
     ],
   },
 })

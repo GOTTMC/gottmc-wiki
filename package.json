@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
@@ -23,6 +22,7 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "rehype-autolink-headings": "^7.1.0",
+    "rehype-prism-plus": "^2.0.1",
     "rehype-slug": "^6.0.0",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.1",

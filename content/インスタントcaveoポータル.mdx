@@ -7,3 +7,39 @@ url: "インスタントcaveoポータル"
 
 ## 入手
 [望都湊駅](/wiki/望都湊駅)付近にある、ポータルのボタンを押すと、1つの[魔法のかけら](/wiki/魔法のかけら)を消費して入手することができる。
+
+## 技術的情報
+### ベースアイテム
+| 名称 | [リソース位置](https://ja.mc.wiki/w/リソース位置) |
+| ---- | ---- |
+| 棒 | `stick` |
+### コンポーネント
+<details>
+  <summary>JSON</summary>
+```json
+{
+  id: "minecraft:stick",
+  components: {
+    "minecraft:custom_name": {
+      italic: 0b,
+      text: "インスタントcaveoポータル",
+      color: "light_purple"
+    },
+    "minecraft:consumable": {
+      consume_seconds: 0.05f,
+      sound: "minecraft:block.beacon.activate",
+      has_consume_particles: 0b,
+      animation: "block"
+    },
+    "minecraft:custom_model_data": {
+      floats: [5.0f]
+    },
+    "minecraft:custom_data": {
+      ib: {
+        id: "consume"
+      }
+    }
+  }
+}
+```
+</details>

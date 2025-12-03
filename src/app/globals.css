@@ -4,6 +4,7 @@
 :root {
   --background: #fffceb;
   --foreground: #171717;
+  --foreground-link: #4d68ff;
 
   --header-background: #fff7b2;
   --header-border: #dfded6a1;
@@ -23,8 +24,23 @@
 /* ダークモード用 */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1d1b01;
+    --foreground: #dddddd;
+    --foreground-link: #4d68ff;
+    
+    --header-background: #645c15;
+    --header-border: #b3b1a6a1;
+
+    --sidebar-menu-background: #867d2a;
+    --sidebar-menu-foreground: #dddddd;
+    --sidebar-menu-content: #c2c2c2;
+
+    --page-article-background: #464332;
+    --page-article-border: #817e64a1;
+
+    --table-border: #aaa;
+    --table-th: #111;
+    --table-td: #505050;
   }
 }
 
@@ -89,7 +105,7 @@ ul {
 }
 
 a {
-  color: #4d68ff;
+  color: var(--foreground-link);
 
   &:hover:not(.hover\:no-underline) {
     text-decoration: underline;
