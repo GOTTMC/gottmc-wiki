@@ -1,9 +1,11 @@
 import { ImageProps } from "next/image";
 
 export default function PixelImage({
+  className,
   ...props
 }: { 
+  className?: string,
   props: ImageProps
 }) {
-  return <img className="pixel-image" {...props} />;
+  return <img {...props} className={`pixel-image ${className || ""}`} />;
 }

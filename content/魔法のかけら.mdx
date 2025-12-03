@@ -3,9 +3,15 @@ title: "魔法のかけら"
 url: "魔法のかけら"
 ---
 
+import PixelImage from '@/components/PixelImage'
+
 **魔法のかけら**は、[魔法のアイテム](/wiki/魔法のアイテム)を入手するための中間素材アイテムである。
 
-![魔法のかけら](/files/mahokake.png "魔法のかけらのカスタムテクスチャ(ArLgon作)")
+<PixelImage
+  src="/files/mahokake.png" 
+  title="魔法のかけらのカスタムテクスチャ(ArLgon作)"
+  alt="魔法のかけら"
+/>
 
 ## 入手
 - [望都湊駅](/wiki/望都湊駅)付近にいる村人と、金インゴット3個で1つ取引。
@@ -13,3 +19,37 @@ url: "魔法のかけら"
 - [望都湊駅](/wiki/望都湊駅)付近にいる村人と、ダイヤモンド1個で2つ取引。
 
 - [望都湊駅](/wiki/望都湊駅)付近にいる村人と、[キングゾンビの王冠](/wiki/キングゾンビの王冠)1個で8つ取引。
+
+## 技術的情報
+### ベースアイテム
+| 名称 | [リソース位置](https://ja.mc.wiki/w/リソース位置) |
+| ---- | ---- |
+| アメジストの欠片 | `amethyst_shard` |
+### コンポーネント
+<details>
+  <summary>JSON</summary>
+```json
+{
+  id: "minecraft:amethyst_shard",
+  components: {
+    "minecraft:lore": [
+      {
+        italic: 0b,
+        text: "不思議なアイテムを買うのに使います"
+      }
+    ],
+    "minecraft:custom_name": {
+      italic: 0b,
+      text: "魔法のかけら",
+      color: "light_purple"
+    },
+    "minecraft:enchantments": {
+      "minecraft:unbreaking": 1
+    },
+    "minecraft:custom_model_data": {
+      floats: [1.0f]
+    }
+  }
+}
+```
+</details>

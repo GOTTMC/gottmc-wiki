@@ -19,6 +19,13 @@
   --table-border: #aaa;
   --table-th: #eee;
   --table-td: #fff;
+
+  --information-box-background: var(--table-td);
+  --information-box-border: #fff06b;
+  --information-box-title-background: #ffee51;
+  --information-box-title-border-top: #fff6a1;
+  --information-box-title-border-side: #f7e759;
+  --information-box-title-border-bottom: #e7dc72;;
 }
 
 /* ダークモード用 */
@@ -85,6 +92,10 @@ h3 {
 h4, h5, h6 {
   font-weight: 500;
   margin: .45rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: flow-root;
 }
 
 p {
@@ -193,4 +204,37 @@ table {
 
 .pixel-image {
   image-rendering: pixelated;
+}
+
+.information-box {
+  float: right;
+  width: 21rem;
+  background: var(--information-box-background);
+  border: 1px solid var(--information-box-border);
+  padding: .48rem;
+  margin-left: .36rem;
+}
+
+.information-box-title {
+  background: var(--information-box-title-background);
+  text-align: center;
+  padding: .24rem .36rem;
+  border: 3px solid;
+  border-color: var(--information-box-title-border-top)
+    var(--information-box-title-border-side)
+    var(--information-box-title-border-bottom)
+    var(--information-box-title-border-side);
+  font-weight: 500;
+  margin-bottom: .32rem;
+}
+
+.information-box-content {
+  padding: .32rem;
+}
+
+.information-box-image {
+  width: 160px;
+  height: 160px;
+  max-width: 100%;
+  aspect-ratio: auto;
 }
