@@ -4,10 +4,24 @@ url: "Final_Sword"
 ---
 
 import MessageBox from "@/components/MessageBox"
+import InformationBox, { InformationContent, InformationImageArea } from '@/components/InformationBox';
+import PixelImage from '@/components/PixelImage';
 
 <MessageBox color="blue">
   このアイテムはまだ実装されていないため、仕様が変更する可能性があります。
 </MessageBox>
+
+<InformationBox title="Final Sword">
+  <InformationContent>
+    <InformationImageArea>
+      <PixelImage
+        src="/files/Final_Sword.png" 
+        alt="Final Sword"
+        className="information-box-image"
+      />
+    </InformationImageArea>
+  </InformationContent>
+</InformationBox>
 
 **Final Sword**（ファイナルソード）は、攻撃力が高い剣である。
 

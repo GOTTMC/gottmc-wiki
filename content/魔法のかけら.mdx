@@ -3,15 +3,23 @@ title: "魔法のかけら"
 url: "魔法のかけら"
 ---
 
-import PixelImage from '@/components/PixelImage'
+import PixelImage from '@/components/PixelImage';
+import InformationBox, { InformationContent, InformationImageArea } from '@/components/InformationBox';
+
+<InformationBox title="魔法のかけら">
+  <InformationContent>
+    <InformationImageArea>
+      <PixelImage
+        src="/files/mahokake.png" 
+        title="魔法のかけらのカスタムテクスチャ(ArLgon作)"
+        alt="魔法のかけら"
+        className="information-box-image"
+      />
+    </InformationImageArea>
+  </InformationContent>
+</InformationBox>
 
 **魔法のかけら**は、[魔法のアイテム](/wiki/魔法のアイテム)を入手するための中間素材アイテムである。
-
-<PixelImage
-  src="/files/mahokake.png" 
-  title="魔法のかけらのカスタムテクスチャ(ArLgon作)"
-  alt="魔法のかけら"
-/>
 
 ## 入手
 - [望都湊駅](/wiki/望都湊駅)付近にいる村人と、金インゴット3個で1つ取引。
