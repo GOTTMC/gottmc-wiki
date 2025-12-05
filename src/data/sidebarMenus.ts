@@ -27,6 +27,10 @@ const menus = [
         url: "/wiki/ボス",
       },
       {
+        title: "コマンド",
+        url: "/wiki/コマンド",
+      },
+      {
         title: "InteractiveChat",
         url: "/wiki/InteractiveChat",
       },
