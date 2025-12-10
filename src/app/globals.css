@@ -208,11 +208,13 @@ table {
 
 .information-box {
   float: right;
+  clear: right;
   width: 21rem;
   background: var(--information-box-background);
   border: 1px solid var(--information-box-border);
   padding: .48rem;
   margin-left: .36rem;
+  margin-bottom: .64rem;
 }
 
 .information-box-title {
