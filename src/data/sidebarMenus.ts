@@ -3,6 +3,10 @@ const menus = [
     title: "カテゴリー",
     contents: [
       {
+        title: "地域",
+        url: "/wiki/地域",
+      },
+      {
         title: "交通",
         url: "/wiki/交通",
       },
