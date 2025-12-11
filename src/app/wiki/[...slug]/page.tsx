@@ -2,6 +2,7 @@ import { notFound, redirect } from "next/navigation";
 import SetPageTitle from "@/components/SetPageTitle";
 import Link, { LinkProps } from "next/link";
 import Image from "next/image";
+import { getTitleFromPathname } from "@/components/PageUtils";
 
 export default async function Page({
   params,
@@ -52,7 +53,13 @@ export default async function Page({
         try {
           await import(`@/content/${urlString.replace(/^\/wiki\//, '').toLowerCase()}.mdx`);
         } catch {
-          return <Link className="link-not-found" {...props} />;
+          return (
+            <Link
+              className="link-not-found" 
+              title={getTitleFromPathname(urlString) + " (存在しないページ)"} 
+              {...props} 
+            />
+          );
         }
       }
 
