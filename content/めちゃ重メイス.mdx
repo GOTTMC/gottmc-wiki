@@ -1,0 +1,87 @@
+---
+title: "めちゃ重メイス"
+url: "めちゃ重メイス"
+---
+
+import InformationBox, { InformationContent, InformationImageArea } from '@/components/InformationBox';
+import PixelImage from '@/components/PixelImage';
+
+{/* 
+<InformationBox title="ITEMNAME">
+  <InformationContent>
+    <InformationImageArea>
+      <PixelImage
+        src="/files/ITEMTEXTURE.png" 
+        alt="ITEMNAME"
+        className="information-box-image"
+      />
+    </InformationImageArea>
+  </InformationContent>
+</InformationBox>
+*/}
+
+**めちゃ重メイス**は、攻撃力が高いが重すぎる[メイス](https://ja.mc.wiki/w/メイス)である。重撃<small>(BE: 密度)</small> Xのエンチャントがついている。
+
+## 入手
+[望都湊駅](/wiki/望都湊駅)付近にいる村人と、[魔法のかけら](/wiki/魔法のかけら)3つとブリーズロッド1本で取引できる。
+
+## 特徴
+基本的な機能は通常のメイスと同じである。重量が重すぎるため持ちながら歩くことは困難であるが、その重さを生かして、普通のメイスよりも強いスマッシュ攻撃をすることができる。
+
+## 技術的情報
+### ベースアイテム
+| 名称 | [リソース位置](https://ja.mc.wiki/w/リソース位置) |
+| ---- | ---- |
+| メイス | `mace` |
+### コンポーネント
+<details>
+  <summary>JSON</summary>
+```js
+{
+  id: "minecraft:mace",
+  count: 1,
+  components: {
+    "minecraft:attribute_modifiers": [
+      {
+        type: "minecraft:gravity",
+        operation: "add_value",
+        amount: 0.08d,
+        id: "minecraft:my6_modifier"
+      },
+      {
+        type: "minecraft:attack_speed",
+        operation: "add_value",
+        amount: -3.9d,
+        id: "minecraft:my6_modifier"
+      },
+      {
+        type: "minecraft:jump_strength",
+        operation: "add_value",
+        amount: -0.2d,
+        id: "minecraft:my6_modifier"
+      },
+      {
+        type: "minecraft:movement_speed",
+        operation: "add_value",
+        amount: -1.2d,
+        id: "minecraft:my6_modifier"
+      }
+    ],
+    "minecraft:lore": [
+      {
+        italic: 0b,
+        text: "重！！！！！！！！！！"
+      }
+    ],
+    "minecraft:custom_name": {
+      italic: 0b,
+      text: "めちゃ重メイス",
+      color: "aqua"
+    },
+    "minecraft:enchantments": {
+      "minecraft:density": 10
+    }
+  }
+}
+```
+</details>
