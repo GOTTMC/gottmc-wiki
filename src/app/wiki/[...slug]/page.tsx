@@ -37,11 +37,11 @@ export default async function Page({
       pathname.toLowerCase() !== metadata.url.toLowerCase() &&
       pathname.toLowerCase() !== pathname
     ) {
-      redirect(pathname.toLowerCase());
+      redirect(encodeURIComponent(pathname.toLowerCase()));
     }
   
     if (pathname !== metadata.url) {
-      redirect(metadata.url);
+      redirect(encodeURIComponent(metadata.url));
     }
   }
 
