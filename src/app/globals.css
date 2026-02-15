@@ -86,7 +86,7 @@ h2 {
 h3 {
   font-size: 1.2em;
   font-weight: 500;
-  margin: .8rem 0 .64rem 0;
+  margin-top: .8rem;
 }
 
 h4, h5, h6 {
@@ -148,8 +148,19 @@ table {
   margin-top: 1rem;
 }
 
-.horizontal-list li {
-  display: inline-block;
+dt {
+  font-weight: bold;
+  margin-bottom: .12rem;
+}
+
+dd {
+  margin-left: 1.6rem;
+  margin-bottom: .24rem;
+}
+
+dl {
+  margin-top: .24rem;
+  margin-bottom: .48rem;
 }
 
 .link-not-found {
