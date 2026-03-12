@@ -1,0 +1,28 @@
+backend:
+  name: github
+  repo: GOTTMC/gottmc-wiki
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
+media_folder: "public/files/uploads"
+site_url: https://wiki.gottmc.j0.si/
+locale: 'en'
+slug:
+  encoding: "unicode"
+  clean_accents: true
+  sanitize_replacement: "_"
+collections:
+  - name: pages
+    label: Pages
+    folder: content
+    create: true
+    extension: mdx
+    format: yaml-frontmatter
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: url, label: URL, widget: string }
+      - { name: body, label: Body, widget: markdown }
